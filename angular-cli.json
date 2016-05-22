@@ -19,7 +19,7 @@
     }
   },
   "defaults": {
-    "prefix": "app",
+    "prefix": "tl",
     "sourceDir": "src"
   }
 }

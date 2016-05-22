@@ -1,0 +1,20 @@
+<md-card>
+  <div class="image">
+    <a [href]="product.clickUrl" target="_blank">
+      <img [src]="product.image.sizes.Best.url" [alt]="product.name">
+    </a>
+  </div>
+  <div class="options">
+    <md-icon (click)="goToProductPage(product)">zoom_in</md-icon>
+    <md-icon>favorite_border</md-icon>
+    <md-icon>notifications_none</md-icon>
+  </div>
+  <div class="product-name">
+    <div class="name">{{product.name}}</div>
+    <div class="retailer">{{product.retailer.name}}</div>
+    <div class="price">
+      <span [class.strikeout]="product.salePriceLabel">{{product.priceLabel}}</span>
+      <span *ngIf="product.salePriceLabel">{{product.salePriceLabel}}</span>
+    </div>
+  </div>
+</md-card>

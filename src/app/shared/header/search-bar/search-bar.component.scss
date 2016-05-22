@@ -1,0 +1,18 @@
+.search {
+  background: #fff;
+  border-bottom: 1px solid #F0F1F2;
+
+  .search-bar {
+    font-size: 16px;
+    background: #fff;
+    color: #444;
+    border: 0;
+    height: 48px;
+    width: 100%;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+

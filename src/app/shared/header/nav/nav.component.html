@@ -1,0 +1,15 @@
+<md-toolbar class="header">
+  <button md-icon-button (click)="openMenu()">
+    <md-icon>menu</md-icon>
+  </button>
+  <span>
+    <img class='logo' [src]="logo" (click)="goHome()">
+  </span>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="fill-remaining-space"></span>
+
+  <a [routerLink]="['/b/' + category]" class="category" *ngFor="let category of categories">
+    {{category}}
+  </a>
+</md-toolbar>

@@ -1,0 +1,76 @@
+md-card {
+  display: inline-block;
+  height: 307px;
+  max-height: 307px;
+  width: 170px;
+  max-width: 170px;
+  box-shadow: none;
+  border: 1px solid #fff;
+  overflow: hidden;
+  padding: 0;
+  text-align: left;
+  border-radius: 0;
+
+  &:hover {
+    box-shadow: 0 0 2px 1px rgba(62, 62, 62, 0.1);
+  }
+
+  .image {
+    height: 210px;
+    width: 180px;
+    background: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translateY(-50%) translateX(50%);
+    }
+  }
+
+  .options {
+    text-align: center;
+    border-top: 1px solid #f3f3f3;
+    border-bottom: 1px solid #f3f3f3;
+    padding: 5px 0 0;
+
+    md-icon {
+      height: 15px;
+      font-size: 18px;
+      margin: 0 7px;
+      cursor: pointer;
+    }
+  }
+
+  .product-name {
+    padding: 5px;
+
+    .name {
+      color: #444;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 12px;
+    }
+
+    .retailer {
+      color: #9b9b9b;
+      font-size: 12px;
+      margin: 5px 0;
+    }
+
+    .price {
+      color: #0080f0;
+      font-size: 16px;
+    }
+
+    .strikeout {
+      color: #bbb;
+      text-decoration: line-through;
+    }
+  }
+}

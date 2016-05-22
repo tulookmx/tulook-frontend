@@ -14,9 +14,4 @@ describe('App: TulookFrontend', () => {
       inject([TulookFrontendAppComponent], (app: TulookFrontendAppComponent) => {
     expect(app).toBeTruthy();
   }));
-
-  it('should have as title \'tulook-frontend works!\'',
-      inject([TulookFrontendAppComponent], (app: TulookFrontendAppComponent) => {
-    expect(app.title).toEqual('tulook-frontend works!');
-  }));
 });

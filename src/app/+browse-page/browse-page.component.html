@@ -1,0 +1,31 @@
+<tl-spinner [loading]="loading"></tl-spinner>
+<div *ngIf="!loading">
+  <div class="breadcrumb" *ngIf="metadata">
+    <h2>
+      {{categories.translateToSpanish(metadata.category.name)}}
+    </h2>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter" *ngFor="let filter of filters">
+      <div class="grid">
+        <div class="grid-cell u-2of3 grid--center">
+          {{filter}}
+        </div>
+        <div class="grid-cell u-1of3 grid--center">
+          <md-icon>arrow_drop_down</md-icon>
+        </div>
+      </div>
+    </button>
+  </div>
+
+  <div
+    class="content"
+    infinite-scroll
+    [infiniteScrollDistance]="1"
+    (scrolled)="getMoreProducts()">
+
+    <tl-product-cell *ngFor="let product of products" [product]="product"></tl-product-cell>
+    <tl-spinner [loading]="scrolling"></tl-spinner>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+.footer {
+  background: #444;
+  padding: 25px;
+  color: #fff;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+
+  ul {
+    display: inline-block;
+    margin-right: 100px;
+    vertical-align: top;
+
+    li {
+      list-style: none;
+      text-transform: capitalize;
+      margin: 8px 0;
+
+      &:not(:first-child) {
+        font-weight: lighter;
+      }
+
+      &:first-child {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}

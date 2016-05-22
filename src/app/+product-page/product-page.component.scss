@@ -1,0 +1,85 @@
+.content, content-similar {
+  padding: 25px 16px;
+}
+
+.content-similar {
+  text-align: center;
+  margin: 25px 16px;
+}
+
+.image-container {
+  background: #fff;
+  text-align: center;
+  height: 400px;
+  width: 400px;
+  border: 1px solid #eee;;
+  outline: 1px solid #fff;
+
+  .main-image {
+    height: 400px;
+  }
+}
+
+.alternate-container {
+  display: inline-block;
+  min-width: 50px;
+  margin-top: 10px;
+  margin-right: 10px;
+  background: #fff;
+  text-align: center;
+
+  .sub-image {
+    height: 50px;
+    width: auto;
+  }
+}
+
+.variant {
+  margin-top: 20px;
+
+  .variant-title {
+    color: #444;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+
+  .variant-option {
+    margin-right: 10px;
+    font-style: italic;
+    font-size: 14px;
+
+    .swatch {
+      border-radius: 50%;
+      border: 1px solid #444;
+    }
+  }
+}
+
+.buy-now {
+  line-height: 30px;
+  width: 250px;
+  background: #0080F0;
+  border: 0;
+  color: #fff;
+  font-size: 12px;
+  font-weight: lighter;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.selected {
+  border-top: 2px solid #444;
+}
+
+.grid {
+  display: flex;
+}
+
+.grid-cell {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.grid--top {
+  align-items: flex-start;
+}

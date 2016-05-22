@@ -3,10 +3,48 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  '@angular2-material': 'vendor/@angular2-material',
+  'lodash': 'vendor/lodash',
+  // 'angular2-infinite-scroll': 'vendor/angular2-infinite-scroll'
 };
 
 /** User packages configuration. */
 const packages: any = {
+  '@angular2-material/toolbar': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'toolbar'
+  },
+  '@angular2-material/progress-circle': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'progress-circle'
+  },
+  '@angular2-material/icon': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'icon'
+  },
+  '@angular2-material/sidenav': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'sidenav'
+  },
+  '@angular2-material/card': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'card'
+  },
+  'lodash': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'lodash'
+  },
+  // 'angular2-infinite-scroll': {
+  //   format: 'cjs',
+  //   defaultExtension: 'js',
+  //   main: 'angular2-infinite-scroll'
+  // },
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -22,6 +60,7 @@ const barrels: string[] = [
   '@angular/router',
   '@angular/platform-browser',
   '@angular/platform-browser-dynamic',
+  '@angular/app-shell',
 
   // Thirdparty barrels.
   'rxjs',
@@ -29,6 +68,18 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
+  'app/search-bar',
+  'app/header',
+  'app/header/nav',
+  'app/header/banner',
+  'app/hero',
+  'app/home-page',
+  'app/+home-page',
+  'app/+browse-page',
+  'app/shared/footer',
+  'app/+product-page',
+  'app/shared/spinner',
+  'app/shared/product-cell',
   /** @cli-barrel */
 ];
 
