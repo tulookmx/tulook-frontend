@@ -1,89 +1,75 @@
-.cs-loader {
-  width: calc(100% - 200px);
-  color: #444;
-  padding: 0 100px;
-  text-align: center;
-  margin-top: 55px;
-  pointer-events: none;
+.loading {
+  width: 100px;
+  height: 102px;
+  border-radius: 100%;
+  margin: 55px auto;
 }
 
-.cs-loader-inner {
-  width: calc(100% - 200px);
-  color: #444;
-  padding: 0 100px;
-  text-align: center;
+.circle {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.circle .inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 5px solid rgba(62, 62, 62, 0.7);
+  border-right: none;
+  border-top: none;
+  background-clip: padding;
+  box-shadow: inset 0px 0px 10px RGBA(0, 128, 240, .15);
 }
 
-.cs-loader-inner label {
-  font-size: 20px;
-  opacity: 0;
-  display:inline-block;
-}
-
-@keyframes lol {
-  0% {
-    opacity: 0;
-    transform: translateX(-300px);
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
-  33% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-  66% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(300px);
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
-@-webkit-keyframes lol {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-300px);
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
-  33% {
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-  }
-  66% {
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateX(300px);
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
-
-.cs-loader-inner label:nth-child(6) {
-  -webkit-animation: lol 3s infinite ease-in-out;
-  animation: lol 3s infinite ease-in-out;
+.circle:nth-of-type(0) {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.circle:nth-of-type(0) .inner {
+  -webkit-animation: spin 2s infinite linear;
+          animation: spin 2s infinite linear;
 }
 
-.cs-loader-inner label:nth-child(5) {
-  -webkit-animation: lol 3s 100ms infinite ease-in-out;
-  animation: lol 3s 100ms infinite ease-in-out;
+.circle:nth-of-type(1) {
+  -webkit-transform: rotate(70deg);
+          transform: rotate(70deg);
+}
+.circle:nth-of-type(1) .inner {
+  -webkit-animation: spin 2s infinite linear;
+          animation: spin 2s infinite linear;
 }
 
-.cs-loader-inner label:nth-child(4) {
-  -webkit-animation: lol 3s 200ms infinite ease-in-out;
-  animation: lol 3s 200ms infinite ease-in-out;
+.circle:nth-of-type(2) {
+  -webkit-transform: rotate(140deg);
+          transform: rotate(140deg);
+}
+.circle:nth-of-type(2) .inner {
+  -webkit-animation: spin 2s infinite linear;
+          animation: spin 2s infinite linear;
 }
 
-.cs-loader-inner label:nth-child(3) {
-  -webkit-animation: lol 3s 300ms infinite ease-in-out;
-  animation: lol 3s 300ms infinite ease-in-out;
-}
-
-.cs-loader-inner label:nth-child(2) {
-  -webkit-animation: lol 3s 400ms infinite ease-in-out;
-  animation: lol 3s 400ms infinite ease-in-out;
-}
-
-.cs-loader-inner label:nth-child(1) {
-  -webkit-animation: lol 3s 500ms infinite ease-in-out;
-  animation: lol 3s 500ms infinite ease-in-out;
+.loading {
+  -webkit-animation: spin 5s infinite linear;
+          animation: spin 5s infinite linear;
 }
