@@ -13,7 +13,7 @@ import { ROUTER_DIRECTIVES, Router } from '@angular/router';
 })
 export class NavComponent implements OnInit {
   categories: Array<string>;
-  logo = './../../../assets/images/tulook-logo.png';
+  logo = 'assets/images/tulook-logo.png';
 
   constructor(private router: Router) {}
 
